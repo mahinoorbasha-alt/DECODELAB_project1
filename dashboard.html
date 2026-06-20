@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmer Portal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h2>🌾 Farmer Portal</h2>
+
+    <nav>
+        <button onclick="showSlide(0)">Home</button>
+        <button onclick="showSlide(1)">Register</button>
+        <button onclick="showSlide(2)">Crops</button>
+        <button onclick="showSlide(3)">Prices</button>
+        <button onclick="showSlide(4)">Schemes</button>
+        <button onclick="showSlide(5);showFarmers();">Members</button>
+    </nav>
+</header>
+
+<div class="slider">
+
+<!-- HOME -->
+<section class="slide active">  
+    <h1>🌱 Welcome Farmer Portal</h1>  
+    <p>Manage crops, farmers and agriculture data easily.</p>  
+
+    <div class="glass-card">
+        <p>🌾 “Empowering farmers with modern technology”</p>
+        <p>🚜 Better farming = Better future</p>
+        <p>🌱 Grow smart, grow healthy</p>
+    </div>
+
+    <div class="card-container">
+        <div class="card" onclick="showHomeInfo('tips')">🌾 Farming Tips</div>
+        <div class="card" onclick="showHomeInfo('irrigation')">💧 Irrigation Guide</div>
+        <div class="card" onclick="showHomeInfo('organic')">🌿 Organic Farming</div>
+    </div>
+
+    <div id="homeInfo" class="glass-card"></div>
+</section>
+
+<!-- REGISTER -->
+<section class="slide">
+    <h2>Register Farmer</h2>
+
+    <div class="glass-card">
+        <input type="text" id="name" placeholder="Farmer Name">
+        <input type="text" id="mobile" placeholder="Mobile">
+        <input type="text" id="village" placeholder="Village">
+        <input type="text" id="district" placeholder="District">
+        <input type="text" id="crop" placeholder="Crop Type">
+        <input type="number" id="land" placeholder="Land Area">
+
+        <button onclick="registerFarmer()">Register</button>
+        <p id="msg"></p>
+    </div>
+</section>
+
+<!-- CROPS -->
+<section class="slide">
+<h2>🌾 Crop Details</h2>
+
+<input type="text" id="searchCrop" placeholder="Search crop..." onkeyup="searchCrops()">
+
+<div class="card-container">
+
+<div class="card" onclick="showCrop('rice')">🌾 Rice</div>
+<div class="card" onclick="showCrop('wheat')">🌾 Wheat</div>
+<div class="card" onclick="showCrop('cotton')">🌾 Cotton</div>
+<div class="card" onclick="showCrop('maize')">🌾 Maize</div>
+<div class="card" onclick="showCrop('sugarcane')">🍬 Sugarcane</div>
+<div class="card" onclick="showCrop('millets')">🌾 Millets</div>
+<div class="card" onclick="showCrop('barley')">🌾 Barley</div>
+
+</div>
+
+<div id="cropInfo" class="glass-card"></div>
+</section>
+
+<!-- PRICES -->
+<section class="slide">
+<h2>💰 Market Prices</h2>
+
+<table>
+<tr><th>Crop</th><th>Price</th></tr>
+<tr><td>Rice</td><td>2500</td></tr>
+<tr><td>Wheat</td><td>2200</td></tr>
+<tr><td>Cotton</td><td>6500</td></tr>
+<tr><td>Maize</td><td>1800</td></tr>
+<tr><td>Sugarcane</td><td>350</td></tr>
+<tr><td>Millets</td><td>2000</td></tr>
+<tr><td>Barley</td><td>1700</td></tr>
+</table>
+
+</section>
+
+<!-- SCHEMES -->
+<section class="slide">
+<h2>🏛 Government Schemes</h2>
+
+<div class="card-container">
+<div class="card" onclick="showScheme('pmkisan')">PM Kisan</div>
+<div class="card" onclick="showScheme('insurance')">Crop Insurance</div>
+<div class="card" onclick="showScheme('soil')">Soil Health Card</div>
+</div>
+
+<div id="schemeInfo" class="glass-card"></div>
+</section>
+
+<!-- MEMBERS -->
+<section class="slide">
+    <h2>👨‍🌾 Registered Farmers</h2>
+    <div id="farmersList" class="glass-card"></div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

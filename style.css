@@ -1,0 +1,299 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+}
+
+/* =========================
+   🌈 LOGIN PAGE DESIGN
+========================= */
+
+.login-body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#00c9ff,#92fe9d,#ff6a00,#ee0979,#7f00ff);
+background-size:400% 400%;
+animation:gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.login-box{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+width:330px;
+color:white;
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+.login-box h1{
+margin-bottom:10px;
+}
+
+.login-box p{
+margin-bottom:15px;
+opacity:0.9;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:14px;
+}
+
+.login-box button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#00e676;
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.login-box button:hover{
+background:#00c853;
+transform:scale(1.05);
+}
+
+/* =========================
+   🌿 HEADER
+========================= */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:linear-gradient(to right,#11998e,#38ef7d);
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* NAV BUTTONS */
+nav button{
+margin:5px;
+padding:8px 14px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav button:hover{
+background:#c8e6c9;
+transform:scale(1.1);
+}
+
+/* =========================
+   🌌 MAIN BACKGROUND
+========================= */
+
+.slider{
+min-height:100vh;
+padding:20px;
+background:linear-gradient(to right,#141e30,#243b55,#0f2027);
+color:white;
+}
+
+/* =========================
+   📄 SLIDES
+========================= */
+
+.slide{
+display:none;
+text-align:center;
+padding:20px;
+animation:fadeIn 0.5s ease;
+}
+
+.slide.active{
+display:block;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* =========================
+   🌟 HEADINGS
+========================= */
+
+h1,h2{
+margin-bottom:20px;
+}
+
+/* =========================
+   💎 GLASS CARD
+========================= */
+
+.glass-card{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(12px);
+padding:20px;
+border-radius:15px;
+width:340px;
+margin:auto;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+.glass-card input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+outline:none;
+font-size:14px;
+}
+
+.glass-card button{
+width:100%;
+padding:10px;
+background:#00e676;
+border:none;
+border-radius:10px;
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.glass-card button:hover{
+background:#00c853;
+transform:scale(1.05);
+}
+
+/* =========================
+   📦 CARDS
+========================= */
+
+.card-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:15px;
+width:170px;
+backdrop-filter:blur(10px);
+transition:0.3s;
+cursor:pointer;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+transform:scale(1.1);
+background:rgba(255,255,255,0.25);
+}
+
+/* =========================
+   🔍 SEARCH BAR
+========================= */
+
+#searchCrop{
+width:60%;
+padding:12px;
+margin:10px;
+border:none;
+border-radius:10px;
+outline:none;
+text-align:center;
+font-size:15px;
+}
+
+/* =========================
+   📊 TABLE (PRICES)
+========================= */
+
+table{
+margin:auto;
+width:85%;
+border-collapse:collapse;
+margin-top:20px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+border-radius:10px;
+overflow:hidden;
+}
+
+th,td{
+padding:12px;
+border:1px solid rgba(255,255,255,0.3);
+text-align:center;
+}
+
+th{
+background:rgba(255,255,255,0.2);
+}
+
+/* =========================
+   ✅ MESSAGE
+========================= */
+
+#msg{
+margin-top:10px;
+color:#00e676;
+font-weight:bold;
+}
+
+/* =========================
+   📱 RESPONSIVE DESIGN
+========================= */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+nav button{
+margin:3px;
+}
+
+.card-container{
+flex-direction:column;
+align-items:center;
+}
+
+table{
+width:100%;
+}
+
+.glass-card{
+width:90%;
+}
+
+#searchCrop{
+width:90%;
+}
+}
