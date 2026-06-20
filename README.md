@@ -162,7 +162,8 @@ Farmer-Portal/
 
 
 
-git clone https://github.com/your-username/farmer-portal.git
+git clone 
+https://github.com/mahinoorbasha-alt/DECODELAB_project1
 
 2. Open the project folder.
 
