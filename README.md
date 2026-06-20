@@ -242,6 +242,7 @@ Internship Project
 
 Developed as part of a web development internship project to demonstrate front-end development, local data management, responsive design, and interactive user interface implementation.
 
-
+LINKDIN:
+https://www.linkedin.com/posts/meharunnisa-noorbasha-02706a377_decodelabs-internship-project1-activity-7471157814095265792-ZssJ?utm_source=share&utm_medium=member_android&rcm=ACoAAF0XWZ8Bnz_oL82TzwLR23BTx2iD4D0MSTE
 ---
 
